@@ -7,7 +7,6 @@ const shared = {
     header: $('header.banner'),
     barba: $('div[data-barba="wrapper"]'),
     footer: $('footer.content-info'),
-    preloader: $('#site-preloader'),
   },
 
   /** Stores the Router instance. */
