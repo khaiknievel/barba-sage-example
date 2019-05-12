@@ -6,4 +6,7 @@ export default {
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
   },
+  destroy() {
+    // JavaScript to be fired when barba triggers beforeLeave
+  },
 };
