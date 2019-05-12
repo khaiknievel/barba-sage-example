@@ -29,43 +29,13 @@ shared.barba = barba
 
 /**
  * ---------------------------------------------------------------------------
- * Testing for post-transition
- * ---------------------------------------------------------------------------
- */
-
-/** Example load the gsap, e.g. Use enqueue_script instead. */
-; [
-  'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js',
-].forEach((url) => {
-  const script = document.createElement('script')
-  script.src = url
-  document.body.append(script)
-})
-
-function examplePostLink() {
-  $('article.post .entry-title a').addClass('post-link')
-}
-
-barba.hooks.beforeAppear(examplePostLink)
-barba.hooks.beforeEnter(examplePostLink)
-barba.hooks.afterEnter(examplePostLink)
-
-/**
- * ---------------------------------------------------------------------------
  * Initialize
  * ---------------------------------------------------------------------------
  */
 
-/** Initialize barba with config. */
-barba.init(barbaConfig)
-
-shared.$.window.
-  on('load', function() {
-    shared.$.html.addClass('page-load')
-
-    shared.$.preloader.on('transitionend', function () {
-      shared.$.html.addClass('page-load--transitionend')
-    })
+jQuery(document)
+  .on('ready', function() {
+    /** Initialize barba with config. */
+    barba.init(barbaConfig)
   })
 ;

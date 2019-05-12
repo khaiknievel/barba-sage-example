@@ -6,4 +6,7 @@ export default {
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
+  destroy() {
+    // JavaScript to be fired when barba triggers beforeLeave
+  },
 };
